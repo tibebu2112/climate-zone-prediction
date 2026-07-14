@@ -14,9 +14,10 @@ st.set_page_config(
 # ── Load Model ────────────────────────────────────────────────────────────────
 @st.cache_resource
 def load_model():
-    model = joblib.load("model/xgb_climate_model.pkl")
-    features = joblib.load("model/features.pkl")
+    model = joblib.load("xgb_climate_model.pkl")
+    features = joblib.load("features.pkl")
     return model, features
+
 
 model, FEATURES = load_model()
 
